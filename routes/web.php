@@ -18,7 +18,13 @@ Route::get('/', function () {
 });
 
 Route::get('/pizzas', function () {
-    //return view('pizzas');
-    //return "Pizzas!";
-    return ["name" => "veg pizzas", "base" => "classic"]; //Lravel will convert this to a JSON string
+    //get data from database
+    //return view('pizzas', ["type" => "Hawain", "base" => "cheesy crust"]);
+
+    $pizza = [
+        "type" => "Hawain",
+        "base" => "cheesy crust",
+        "price" => 10
+    ];
+    return view('pizzas', $pizza);
 });

@@ -25,6 +25,26 @@
 
                 <!-- outputing Data from the router via the variable name-->
                 <p>{{ $type }} - {{ $base }} - {{ $price }}</p>
+
+                <!--Using an if statement directive-->
+                @if($price > 15)
+                    <p>This pizza is expensive</p>
+                @elseif($price < 5)
+                    <p>This pizza is cheap</P>
+                @else 
+                    <p>This pizza is normally prized</p>
+                @endif
+
+                <!--Opposite of "if" statement-->
+                @unless ($base == "cheesy crust")
+                    <p>You don't have a cheese crust</p>
+                @endunless
+
+                <!--Using vanilla (ordinary) php --->
+                @php
+                    $name = "Tony";
+                    echo $name;
+                @endphp
             </div>
         </div>
     </body>

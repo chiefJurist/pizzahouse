@@ -23,28 +23,25 @@
                     Pizza List
                 </div>
 
-                <!-- outputing Data from the router via the variable name-->
-                <p>{{ $type }} - {{ $base }} - {{ $price }}</p>
+                <!-- FOR LOOPS -->
+                {{-- @for ($i = 0; $i < 5; $i++)
+                    <p>The value of i is {{ $i }}</p>
+                @endfor --}}
 
-                <!--Using an if statement directive-->
-                @if($price > 15)
-                    <p>This pizza is expensive</p>
-                @elseif($price < 5)
-                    <p>This pizza is cheap</P>
-                @else 
-                    <p>This pizza is normally prized</p>
-                @endif
+                {{-- @for ($i = 0; $i < count($pizzas); $i++)
+                    <p>{{ $pizzas[$i]["type"] }} </p>
+                @endfor --}}
 
-                <!--Opposite of "if" statement-->
-                @unless ($base == "cheesy crust")
-                    <p>You don't have a cheese crust</p>
-                @endunless
-
-                <!--Using vanilla (ordinary) php --->
-                @php
-                    $name = "Tony";
-                    echo $name;
-                @endphp
+                @foreach ($pizzas as $pizza)
+                    <div>{{$loop->index + 1}} {{ $pizza["type"] }} - {{ $pizza["base"] }}
+                        @if ($loop->first)
+                            <span> -first in the loop</span>
+                        @endif
+                        @if ($loop->last)
+                            <span> -last in the loop</span>
+                        @endif
+                    </div>
+                @endforeach
             </div>
         </div>
     </body>

@@ -7,11 +7,6 @@
                 Pizza List
             </div>
 
-            <p class="flex justify-center">{{ $name }}</p>
-
-            <p class="flex justify-center">{{ $age }}</p>
-
-
             @foreach ($pizzas as $pizza)
                 <div>{{$loop->index + 1}} {{ $pizza["type"] }} - {{ $pizza["base"] }}
                     @if ($loop->first)

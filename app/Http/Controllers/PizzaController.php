@@ -17,8 +17,10 @@ class PizzaController extends Controller
         return view('pizzas.index', ["pizzas" => $pizzas]);
     }
 
+    //Function for getting a single record
     public function show ($id) {
-        return view('pizzas.show', ["id" => $id]);
+        $pizza = Pizza::findOrFail($id);
+        return view('pizzas.show', ["pizza" => $pizza]);
     }
 
     //Function for creating a webform

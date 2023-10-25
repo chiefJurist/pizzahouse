@@ -20,7 +20,8 @@
             <img src="/img/logo.jpg" alt="pizza-house logo">
             <p class="title flex justify-center">
                 The North's Best Pizza
-            </p>
+            </p><br><br>
+            <p class="mssg">{{ session('mssg') }}</p>
             <a href="/pizzas/create" class="flex justify-center">Order a Pizza</a>
         </div>
     </div>

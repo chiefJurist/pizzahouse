@@ -17,14 +17,26 @@ class PizzaController extends Controller
         return view('pizzas.index', ["pizzas" => $pizzas]);
     }
 
+
     //Function for getting a single record
     public function show ($id) {
         $pizza = Pizza::findOrFail($id);
         return view('pizzas.show', ["pizza" => $pizza]);
     }
 
+
     //Function for creating a webform
     public function create () {
         return view('pizzas.create');
+    }
+
+
+    //Function for Saving Data
+    public function store() {
+        error_log(request('name'));
+        error_log(request('type'));
+        error_log(request('base'));
+
+        return redirect('/');
     }
 }

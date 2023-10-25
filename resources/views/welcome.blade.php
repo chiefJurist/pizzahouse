@@ -21,6 +21,7 @@
             <p class="title flex justify-center">
                 The North's Best Pizza
             </p>
+            <a href="/pizzas/create" class="flex justify-center">Order a Pizza</a>
         </div>
     </div>
 @endsection

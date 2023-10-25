@@ -16,11 +16,11 @@
             </div>
         @endif
 
-        <div class="max-w-7xl mx-auto p-6 lg:p-8">
+        <div class="content">
             <img src="/img/pizza-house.png" alt="pizza-house logo">
-            <p class="title flex justify-center">
+            <p class="title m-b-md">
                 The North's Best Pizza
-            </p><br><br>
+            </p><br>
             <p class="mssg">{{ session('mssg') }}</p>
             <a href="/pizzas/create" class="flex justify-center">Order a Pizza</a>
         </div>

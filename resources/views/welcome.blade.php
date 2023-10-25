@@ -17,7 +17,7 @@
         @endif
 
         <div class="max-w-7xl mx-auto p-6 lg:p-8">
-            <img src="/img/logo.jpg" alt="pizza-house logo">
+            <img src="/img/pizza-house.png" alt="pizza-house logo">
             <p class="title flex justify-center">
                 The North's Best Pizza
             </p><br><br>

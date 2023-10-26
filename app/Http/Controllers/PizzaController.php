@@ -7,13 +7,19 @@ use App\Models\Pizza;
 
 class PizzaController extends Controller
 {
+    //Protecting Routes
+    // public function __construct() {
+    //     $this->middleware("auth");
+    // }
+    //The method above applies the auth to all views
+
     public function index () {
         //Getting data from the database
-        //$pizzas = Pizza::all(); //getting all the data
-        //$pizzas = Pizza::orderBy("name", "desc")->get();//ordering by a specific column
-        //$pizzas = Pizza::where("type", "hawaiian")->get();//Just like mysql where
-        $pizzas = Pizza::latest()->get(); //orders by created_at
-    
+        //$pizzas = Pizza::all();
+        //$pizzas = Pizza::orderBy("name", "desc")->get();
+        //$pizzas = Pizza::where("type", "hawaiian")->get();
+        $pizzas = Pizza::latest()->get();
+
         return view('pizzas.index', ["pizzas" => $pizzas]);
     }
 

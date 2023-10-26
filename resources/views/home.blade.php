@@ -15,7 +15,7 @@
                     @endif
 
                     {{ __('You are logged in!') }}
-                    <a href="/pizzas">View all pizza orders</a>
+                    <p><a href="/pizzas">View all pizza orders</a></p>
                 </div>
             </div>
         </div>
